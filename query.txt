@@ -3,3 +3,9 @@ Query 1:
 SELECT count(*) AS num_student
 FROM `students`
 WHERE `date_of_birth` LIKE '%1990%';
+
+Query 2:
+
+SELECT count(*) AS crediti_10
+FROM `courses`
+WHERE `cfu` > 10;
