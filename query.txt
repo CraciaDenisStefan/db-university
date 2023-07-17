@@ -27,7 +27,7 @@ Query 5:
 
 SELECT *
 FROM `exams`
-WHERE HOUR(`hour`) >14
+WHERE HOUR(`hour`) >=14
 AND `date` LIKE '2020-06-20';
 
 Query 6:
