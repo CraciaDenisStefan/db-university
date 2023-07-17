@@ -45,4 +45,4 @@ Query 8:
 
 SELECT count(*) AS teachers_phone
 FROM `teachers` 
-WHERE `phone` IS NOT NULL;
+WHERE `phone` IS  NULL;
