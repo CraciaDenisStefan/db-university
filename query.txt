@@ -40,3 +40,9 @@ Query 7:
 
 SELECT count(*) AS num_departments
 FROM `departments`;
+
+Query 8:
+
+SELECT count(*) AS teachers_phone
+FROM `teachers` 
+WHERE `phone` IS NOT NULL;
