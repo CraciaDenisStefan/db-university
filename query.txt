@@ -1,12 +1,12 @@
 Query 1:
 
-SELECT count(*) AS num_student
+SELECT *
 FROM `students`
 WHERE `date_of_birth` LIKE '%1990%';
 
 Query 2:
 
-SELECT count(*) AS crediti_10
+SELECT * 
 FROM `courses`
 WHERE `cfu` > 10;
 
