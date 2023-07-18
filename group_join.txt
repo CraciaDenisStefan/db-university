@@ -18,3 +18,10 @@ SELECT AVG(`exam_student`.`vote`) AS `media`,`exams`.`id` AS `exam`
 FROM `exam_student`
 JOIN `exams` ON `exams`.`id`= `student_id`
 GROUP BY `exam`;
+
+Query 4:
+
+SELECT `departments`.`name`, COUNT(`degrees`.`id`) AS `course_n`
+FROM `departments` 
+JOIN `degrees` ON `degrees`.`department_id` = `departments`.`id` 
+GROUP BY `departments`.`name`;
