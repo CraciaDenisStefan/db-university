@@ -25,3 +25,14 @@ SELECT `departments`.`name`, COUNT(`degrees`.`id`) AS `course_n`
 FROM `departments` 
 JOIN `degrees` ON `degrees`.`department_id` = `departments`.`id` 
 GROUP BY `departments`.`name`;
+
+
+
+JOIN :
+
+Query 1 :
+
+SELECT  `degrees`.`name`, COUNT(`students`.`id`) AS `students_n`
+FROM `degrees`
+JOIN `students` ON `students`.`degree_id` = `degrees`.`id`
+WHERE `degrees`.`name` LIKE 'Corso di Laurea in Economia';
