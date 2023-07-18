@@ -52,3 +52,11 @@ FROM `teachers`
 JOIN `course_teacher` ON `teachers`.`id` = `course_teacher`.`teacher_id`
 JOIN `courses` ON `course_teacher`.`course_id`=`courses`.`id`
 WHERE `teachers`.`id` = 44;
+
+Query 4 :
+
+SELECT `degrees`.* ,`students`.`surname` AS `cognome`,`students`.`name` AS `nome` ,`departments`.`name` AS `nome_dipartimento`
+FROM `degrees`
+JOIN `students` ON `students`.`degree_id` = `degrees`.`id`
+JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
+ORDER BY `students`.`surname`,`students`.`name`  ASC;
