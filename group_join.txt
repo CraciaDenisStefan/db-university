@@ -11,3 +11,10 @@ Query 2:
 SELECT count(*) AS `teachers_n`, `office_address`
 FROM `teachers`
 GROUP BY `office_address`;
+
+Query 3:
+
+SELECT AVG(`exam_student`.`vote`) AS `media`,`exams`.`id` AS `exam`
+FROM `exam_student`
+JOIN `exams` ON `exams`.`id`= `student_id`
+GROUP BY `exam`;
