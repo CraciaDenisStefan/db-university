@@ -32,7 +32,15 @@ JOIN :
 
 Query 1 :
 
-SELECT  `degrees`.`name`, COUNT(`students`.`id`) AS `students_n`
-FROM `degrees`
+SELECT `degrees`.`name` AS `deg_name` ,`students`.`name` AS `stu_name` ,`students`.`surname` AS `stu_surname`
+FROM `degrees` 
 JOIN `students` ON `students`.`degree_id` = `degrees`.`id`
 WHERE `degrees`.`name` LIKE 'Corso di Laurea in Economia';
+
+Query 2 :
+
+SELECT `departments`.`name` AS `dep_name` ,`degrees`.`name` AS `deg_name`
+FROM `departments` 
+JOIN `degrees` ON `degrees`.`department_id` = `departments`.`id`   
+WHERE  `departments`.`name` LIKE 'Dipartimento di Neuroscienze'
+AND `degrees`.`level` LIKE 'magistrale';
